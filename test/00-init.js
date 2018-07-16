@@ -55,10 +55,10 @@ describe('AlchemyMVC', function() {
 			let path_to_plugin = libpath.resolve(__filename, '..', '..');
 
 			// Load the package.json
-			let package = require(libpath.resolve(path_to_plugin, 'package.json'));
+			let package_info = require(libpath.resolve(path_to_plugin, 'package.json'));
 
 			// Use this plugin
-			alchemy.usePlugin(package.name, {path_to_plugin: path_to_plugin});
+			alchemy.usePlugin(package_info.name, {path_to_plugin: path_to_plugin});
 
 			await pledge;
 		});
