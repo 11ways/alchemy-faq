@@ -40,6 +40,19 @@ Faq.constitute(function addFields() {
 
 	// The order of this FAQ
 	this.addField('order', 'Number');
+
+	// Make it slugable
+	this.addBehaviour('sluggable');
+
+	if (alchemy.plugins.faq.searchable) {
+		this.addBehaviour('search', {
+			fields: {
+				body       : 50,
+				teaser     : 40,
+				title      : 20
+			}
+		});
+	}
 });
 
 /**
@@ -63,6 +76,7 @@ Faq.constitute(function chimeraConfig() {
 	list.addField('title');
 	list.addField('teaser');
 	list.addField('body');
+	list.addField('slug');
 	list.addField('order', {make_sortable: true});
 
 	// Get the edit group
@@ -71,5 +85,6 @@ Faq.constitute(function chimeraConfig() {
 	edit.addField('title');
 	edit.addField('teaser');
 	edit.addField('body');
+	edit.addField('slug');
 	edit.addField('order');
 });
