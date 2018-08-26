@@ -73,11 +73,12 @@ Faq.constitute(function chimeraConfig() {
 
 	list.options.paginate = false;
 
+	list.addField('updated');
 	list.addField('title');
 	list.addField('teaser');
 	list.addField('body');
 	list.addField('slug');
-	list.addField('order', {make_sortable: true});
+	list.addField('order', {make_sortable: true, hide: true});
 
 	// Get the edit group
 	let edit = this.chimera.getActionFields('edit');
