@@ -2,21 +2,21 @@
 	"name"            : "alchemy-faq",
 	"description"     : "The FAQ plugin for AlchemyMVC projects",
 	"author"          : "Jelle De Loecker <jelle@develry.be>",
-	"version"         : "0.1.0-alpha",
+	"version"         : "0.1.0",
 	"repository"      : "skerit/alchemy-faq",
 	"license"         : "MIT",
 	"keywords"        : ["faq", "alchemymvc"],
 	"contributors"    : [],
 	"dependencies"    : {},
 	"devDependencies" : {
-		"alchemymvc" : "~1.0.3",
+		"alchemymvc" : "~1.0.4",
 		"codecov"    : "~3.0.4",
 		"mocha"      : "~5.2.0",
 		"mongo-unit" : "~1.3.2",
 		"nyc"        : "^12.0.2"
 	},
 	"peerDependencies": {
-		"alchemymvc" : "~1.0.3"
+		"alchemymvc" : "~1.0.4"
 	},
 	"scripts": {
 		"test"            : "node_modules/.bin/mocha --exit --reporter spec --bail --timeout 5000 --file test/00-init.js",
@@ -26,6 +26,5 @@
 	},
 	"engines": {
 		"node": ">=8.9.0"
-	},
-	"private": true
+	}
 }
