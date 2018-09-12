@@ -11,5 +11,8 @@ alchemy.plugins.chimera.menu.set('faq', {
 		controller : 'editor',
 		subject    : 'faq',
 		action     : 'index'
+	},
+	icon: {
+		fa: 'question'
 	}
 });
